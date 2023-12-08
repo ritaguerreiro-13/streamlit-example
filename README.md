@@ -152,9 +152,11 @@ for popular_landmarks in popular_places:
     if popular_place is not None:
         places_names.append(popular_place)
 
-popular_places_random = random.choices(places_names, k=3)
-
-st.write(f"Popular places to visit in the city: {popular_places_random}")
+if places_names == []:
+    st.write ("There is no recommendation for popular places")
+else:
+    popular_places_random = random.choice(places_names, k=3)
+    st.write(f"Popular places to visit in the city: {popular_places_random}")
 
 # Flights
 
