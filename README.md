@@ -313,7 +313,6 @@ flight_price_total = flight_price * (number_people + senior_number)
 # Subtract hotel expenses from the budget
 if budget_tracker.subtract_expense(gross_amount):
     st.write(f"Hotel booked! Remaining budget after hotel: ${budget_tracker.budget}")
-    # Subtract flight expenses from the updated budget
     if budget_tracker.subtract_expense(flight_price_total):
         st.write(f"Flight booked! Remaining budget after flights: ${budget_tracker.budget}")
     else:
